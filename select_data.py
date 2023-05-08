@@ -6,16 +6,16 @@ con = sqlite3.connect('dbdb.db')
 cursor = con.cursor() 
 
 sql = '''
-SELECT * FROM melon where artist = '임영웅'
+SELECT count(*) FROM melon where artist = '임영웅'
 '''
 cursor.execute(sql) # sql 을 실행
 # 하나의 데이터를 보기
 # data = cursor.fetchone()
-# print(data)
+print(cursor.fetchone())
 
 # 전체 데이터 보기
-all_data = cursor.fetchall()
-# print(all_data)
+# all_data = cursor.fetchall()
+# # print(all_data)
 
-for d in all_data:
-    print(f'{d[0]}위 {d[1]} - {d[2]}')
+# for d in all_data:
+#     print(f'{d[0]}위 {d[1]} - {d[2]}')
