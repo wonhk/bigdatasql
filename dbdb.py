@@ -1,12 +1,9 @@
 import sqlite3
 
-# sqlite db 파일 생성 및 연결
-def db_con():
-    return sqlite3.connect('dbdb.db')
-
 # 데이터 넣기 함수
 def save_data():
-    con = db_con()
+    # sqlite db 파일 생성 및 연결
+    con = sqlite3.connect('dbdb.db')
     # sql 문장을 실행시키기 위해 준비
     cursor = con.cursor()
     sql = '''
@@ -19,7 +16,8 @@ def save_data():
 
 # 데이터 보기 함수
 def get_data():
-    con = db_con()
+    # sqlite db 파일 생성 및 연결
+    con = sqlite3.connect('dbdb.db')
     # sql 문장을 실행시키기 위해 준비
     cursor = con.cursor() 
 
