@@ -6,7 +6,7 @@ con = sqlite3.connect('dbdb.db')
 cursor = con.cursor() 
 
 sql = '''
-SELECT * FROM melon
+SELECT * FROM melon where artist = '임영웅'
 '''
 cursor.execute(sql) # sql 을 실행
 # 하나의 데이터를 보기
