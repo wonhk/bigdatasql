@@ -6,7 +6,7 @@ con = sqlite3.connect('dbdb.db')
 cursor = con.cursor() 
 
 sql = '''
-SELECT * FROM Person
+SELECT * FROM melon
 '''
 cursor.execute(sql) # sql 을 실행
 # 하나의 데이터를 보기
@@ -15,4 +15,7 @@ cursor.execute(sql) # sql 을 실행
 
 # 전체 데이터 보기
 all_data = cursor.fetchall()
-print(all_data)
+# print(all_data)
+
+for d in all_data:
+    print(f'{d[0]}위 {d[1]} - {d[2]}')
